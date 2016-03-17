@@ -1,1 +1,52 @@
-123
+package construtores;
+
+public class ContatoTeste {
+
+	public static void main(String[] args) {
+		int i,tamanho;
+		String nome="noName",telefone;
+		Contato[] contatos=new Contato[3];
+		for(i=0;i<tamanho;i++)
+		{
+			
+			contatos[i]=new contato(nome,telefone);
+			
+			
+		}
+		Contato contato=new Contato("Pedro","9988-1212");
+	//	contato.mostrar();
+		System.out.println("O nome e "+contato.retornaNome());
+		System.out.println("Telefone  "+contato.retornaTelefone());
+	//	Contato contato1=new Contato("Laiz","8147-9561");
+	}
+
+}
+
+
+package construtores;
+
+public class Contato {
+		private String nome;
+		private String numTelefone;
+		
+		
+		Contato(String nome,String numTelefone){
+			this.nome=nome;
+			this.numTelefone=numTelefone;				
+		}
+		
+		void mostrar(){
+			System.out.println(nome);
+			System.out.println(numTelefone);
+			
+		}
+		String retornaNome(){
+			return nome;
+		}
+		String retornaTelefone(){
+			return numTelefone;
+			
+		}
+}
+
+	
