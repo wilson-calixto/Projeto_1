@@ -50,3 +50,52 @@ public class Contato {
 }
 
 	
+
+
+
+
+
+
+package construtores;
+
+import javax.swing.JOptionPane;
+public class ContatoTeste {
+
+	public static void main(String[] args) {
+		int tamanho=3;
+	//	String nome="noName",telefone="9585-4546";
+		Contato[] contatos=new Contato[tamanho];
+	
+		
+		for(int i=0;i<contatos.length;i++)
+		{
+					Contato contato = new Contato();
+					String nome = JOptionPane.showInputDialog("digite o nome ");
+					contato.setNome(nome);
+					String telefone = JOptionPane.showInputDialog("digite o telefone ");
+					contato.setTelefone(telefone);
+					contatos[i]=contato;
+			
+		}
+		//JOptionPane.show
+		String listaDeContatos="-----------Lista de contatos------------\n";
+		
+		for(int i =0; i<contatos.length;i++ ){
+			listaDeContatos+="Nome do contato"+
+			contatos[i].getNome()+"\n"+"Telefone do contato:"+
+			contatos[i].getTelefone()+"\n";
+			
+			
+		}
+		JOptionPane.showMessageDialog(null,listaDeContatos);
+		
+		
+		
+		//Contato contato=new Contato("Pedro","9988-1212");
+	//	contato.mostrar();
+		//System.out.println("O nome e "+contato.retornaNome());
+		//System.out.println("Telefone  "+contato.retornaTelefone());
+	//	Contato contato1=new Contato("Laiz","8147-9561");
+	}
+
+}
